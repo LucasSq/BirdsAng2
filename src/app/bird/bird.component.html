@@ -6,12 +6,12 @@
 	<button (click)="fbPostData(name, color)">Add bird</button>
 </form>
 
-<ul id="birds-listing" *ngFor="let bird of birds">
-	<div>
-	<li>Name: {{bird.name}}</li>
-	<li>Color: {{bird.color}}</li>
+<div id="birds-listing" class = "card" *ngFor="let bird of birds">
+	<div class = "container">
+		<p>{{bird.name}}</p>
+		<h4>Color: {{bird.color}}</h4>
 	</div>
-</ul>
+<div>
 
 
 

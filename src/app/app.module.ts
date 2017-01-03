@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BirdComponent } from './bird/bird.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BirdComponent
+    BirdComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
