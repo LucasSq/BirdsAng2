@@ -1,13 +1,33 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 33%;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.faces{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: orange;
+	backface-visibility: hidden;
+	transition: 1s;
 }
 
-.container {
-    padding: 2px 16px;
+.back{
+	transform: rotateY(-180deg);
+}
+
+.card:hover .front{
+    transform: rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: rotateY(0deg);
 }
