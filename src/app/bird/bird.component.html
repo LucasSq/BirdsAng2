@@ -1,20 +1,19 @@
-<h2>Bird works!</h2>
-
-<form id="add-bird" name="add-bird">
-	<input type="text" name = "name" [(ngModel)]="name"/>
-	<input type="text" name = "color" [(ngModel)]="color"/>
-	<button (click)="fbPostData(name, color)">Add bird</button>
-</form>
-
-<div id="birds-listing" class = "card" *ngFor="let bird of birds">
-	<div class = "faces front">
-		<p>{{bird.name}}</p>
-		<h4>Color: {{bird.color}}</h4>
+ <div class = "container">
+ 	<div class = "row">
+		<div class = "col-sm-3" *ngFor="let bird of birds">
+			<div id="birds-listing" class = "card"> 
+				<div class = "faces front">
+					<p>{{bird.name}}</p>
+					<h4>Color: {{bird.color}}</h4>
+				</div>
+				<div class = "faces back">
+				<p>HElloooo!</p>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class = "faces back">
-	<p>HElloooo!</p>
-	</div>
-<div>
+</div>
+
 
 
 

@@ -27,8 +27,4 @@ export class BirdComponent implements OnInit {
 		})
 	}
 
-	fbPostData(name, color){
-		firebase.database().ref('/birds').push({name: name, color: color})
-	}
-
 }

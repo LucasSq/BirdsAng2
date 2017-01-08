@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { BirdComponent } from './bird/bird.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BirdAdderComponent } from './bird-adder/bird-adder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BirdComponent,
-    NavbarComponent
+    NavbarComponent,
+    BirdAdderComponent
   ],
   imports: [
     BrowserModule,
