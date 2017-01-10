@@ -8,14 +8,14 @@
 					<h4>Father: {{bird.data.father}}</h4>
 					<h4>Mother: {{bird.data.mother}}</h4>
 					<h4>Date born: {{bird.data.dateBorn}} </h4>
-					<button (click)="flipToBackButt(bird)" class = "flip"></button>
+					<button (click)="flipToBackButt(bird)" class = "flip flipButtonFront"></button>
 				</div>
 				<div class = "faces back" [ngClass]="flipToFront(bird)">
 				<p>Genes</p>
 				<h4>Face: {{bird.data.face}}</h4>
 				<h4>Back:  {{bird.data.back}}</h4>
 				<h4>Breast: {{bird.data.breast}} </h4>
-				<button (click)="flipToFrontButt(bird)" class = "flip"></button>
+				<button (click)="flipToFrontButt(bird)" class = "flip flipButtonBack"></button>
 				</div>
 			</div>
 		</div>
