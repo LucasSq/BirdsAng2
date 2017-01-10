@@ -29,10 +29,22 @@
 		background: cyan;
 }
 
-.card:hover .front{
+/*.card:hover .front{
     transform: rotateY(180deg);
 }
 
 .card:hover .back{
     transform: rotateY(0deg);
+}*/
+
+.flip {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 20px;
+	width: 20px;
+}
+
+.flipExtra{
+	transform: rotateY(180deg);
 }

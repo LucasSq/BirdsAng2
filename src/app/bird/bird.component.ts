@@ -10,7 +10,8 @@ declare var firebase: any;
 })
 export class BirdComponent implements OnInit {
 
-  	birds = [];	
+  	birds = [];
+  	flipBack = false;
 
 	constructor(private birdservice: BirdFinderService) {}
 
@@ -23,8 +24,19 @@ export class BirdComponent implements OnInit {
 
 	fbGetData() {
 		firebase.database().ref('/birds').on('child_added', (snapshot) => {
-			this.birds.push(snapshot.val())
+			this.birds.push({
+				data: snapshot.val(),
+				flipBack: false}
+				)
 		})
 	}
 
+	flipToBackButt(bird){
+		bird.flipBack = true;
+	}
+
+	flipToBack(bird){
+		if(bird.flipBack){
+		return "flipExtra"}
+	}
 }
