@@ -11,7 +11,6 @@ declare var firebase: any;
 export class BirdComponent implements OnInit {
 
   	birds = [];
-  	flipBack = false;
 
 	constructor(private birdservice: BirdFinderService) {}
 
@@ -33,10 +32,27 @@ export class BirdComponent implements OnInit {
 
 	flipToBackButt(bird){
 		bird.flipBack = true;
+		bird.flipFront = false;
+	}
+
+	flipToFrontButt(bird){
+		bird.flipBack = false;
+		bird.flipFront = true;
 	}
 
 	flipToBack(bird){
 		if(bird.flipBack){
-		return "flipExtra"}
+		return "flipFront"}
+		{
+			return ""
+		}
+	}
+
+	flipToFront(bird){
+		if(bird.flipBack){
+		return "showBack"}
+		else {
+			return ""
+		}
 	}
 }

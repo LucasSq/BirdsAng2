@@ -3,12 +3,13 @@
 		<div class = "col-sm-3" *ngFor="let bird of birds">
 			<div id="birds-listing" class = "card"> 
 				<div class = "faces front" [ngClass]="flipToBack(bird)">
-					<p>{{bird.name}}</p>
-					<h4>Color: {{bird.color}}</h4>
+					<p>{{bird.data.name}}</p>
+					<h4>Color: {{bird.data.color}}</h4>
 					<button (click)="flipToBackButt(bird)" class = "flip"></button>
 				</div>
-				<div class = "faces back">
+				<div class = "faces back" [ngClass]="flipToFront(bird)">
 				<p>HElloooo!</p>
+				<button (click)="flipToFrontButt(bird)" class = "flip"></button>
 				</div>
 			</div>
 		</div>

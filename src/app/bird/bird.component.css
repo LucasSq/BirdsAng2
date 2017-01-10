@@ -45,6 +45,10 @@
 	width: 20px;
 }
 
-.flipExtra{
+.flipFront{
 	transform: rotateY(180deg);
+}
+
+.showBack{
+	transform: rotateY(0deg);
 }
