@@ -11,6 +11,7 @@ declare var firebase: any;
 export class BirdComponent implements OnInit {
 
   	birds = [];
+  	amount = 0;
 
 	constructor(private birdservice: BirdFinderService) {}
 
@@ -25,8 +26,10 @@ export class BirdComponent implements OnInit {
 		firebase.database().ref('/birds').on('child_added', (snapshot) => {
 			this.birds.push({
 				data: snapshot.val(),
-				flipBack: false}
+				flipBack: false,
+				}
 				)
+		this.amount = this.birds.length			
 		})
 	}
 

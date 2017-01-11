@@ -13,7 +13,6 @@ export class BirdAdderComponent implements OnInit {
   ngOnInit() {
   }
 
-
 	fbPostData(name, color){
 		firebase.database().ref('/birds').push({name: name, color: color})
 	}
