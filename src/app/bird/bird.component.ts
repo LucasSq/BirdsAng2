@@ -9,36 +9,32 @@ declare var firebase: any;
   providers: [BirdFinderService]
 })
 export class BirdComponent implements OnInit {
-
-  	birds = [];
-  	amount = 0;
-
-	constructor(private birdservice: BirdFinderService) {}
-
-	ngOnInit() {
+  birds = [];
+  amount = 0;
+   constructor(private birdservice: BirdFinderService) {}
+  ngOnInit() {
 		/*this.birdservice.getBirds().subscribe(
 		(data) => this.birds = data);*/
-
-		this.fbGetData();
-	}
+    this.fbGetData();
+    }
 
 	fbGetData() {
-		firebase.database().ref('/birds').on('child_added', (snapshot) => {
+    firebase.database().ref('/birds').on('child_added', (snapshot) => {
 			this.birds.push({
 				data: snapshot.val(),
 				flipBack: false,
 				}
 				)
-		this.amount = this.birds.length			
+		this.amount = this.birds.length
 		})
 	}
 
-	flipToBackButt(bird){
+	showBack(bird){
 		bird.flipBack = true;
 		bird.flipFront = false;
 	}
 
-	flipToFrontButt(bird){
+	showFront(bird){
 		bird.flipBack = false;
 		bird.flipFront = true;
 	}
